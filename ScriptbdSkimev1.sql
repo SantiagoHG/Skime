@@ -25,3 +25,7 @@ alter table MetaUsuario add foreign key (idMetaColectiva) references MetaColecti
 alter table MetaUsuario add foreign key (idUsuario) references Usuario(idUsuario);
 #alter table Amigos add foreign key (idAmigo1) references Usuario(idAmigo1);
 #alter table Amigos add foreign key (idAmigo2) references Usuario(idAmigo2);
+
+alter table Lista add idUsuario int(6);
+alter table Lista add foreign key(idUsuario) references Usuario(idUsuario);
+

@@ -160,7 +160,10 @@ CREATE TABLE `Lista` (
   `idLista` int(6) NOT NULL AUTO_INCREMENT,
   `NombreLista` varchar(65) DEFAULT NULL,
   `ProgresoLista` float DEFAULT NULL,
-  PRIMARY KEY (`idLista`)
+  `idUsuario` int(6) DEFAULT NULL,
+  PRIMARY KEY (`idLista`),
+  KEY `idUsuario` (`idUsuario`),
+  CONSTRAINT `lista_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `Usuario` (`idUsuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -296,4 +299,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-27 14:17:45
+-- Dump completed on 2017-11-28 16:41:42
