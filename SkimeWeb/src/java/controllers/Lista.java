@@ -53,7 +53,7 @@ public class Lista {
         this.progresoLista = progresoLista;
     }
     
-    public ArrayList <Lista> consultarListas (int idUsuario) {
+    public ArrayList <Lista> consultarListas(int idUsuario) {
         Connection cn = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
