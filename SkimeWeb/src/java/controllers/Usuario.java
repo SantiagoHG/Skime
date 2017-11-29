@@ -184,7 +184,7 @@ public class Usuario {
         return usuario;  
     }
     
-    public void editarInformacion(int idUsuario, String nombre, String nickname, double ingresoFijo, double ingresoPeriodo) throws SQLException{
+    public void editarInformacion(int idUsuario, String nombre, String nickname, double ingresoFijo, int ingresoPeriodo) throws SQLException{
         Connection cn = null;
         PreparedStatement ps = null;
         
