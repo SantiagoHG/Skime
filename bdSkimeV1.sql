@@ -26,7 +26,11 @@ CREATE TABLE `Amigos` (
   `idAmigos` int(6) NOT NULL AUTO_INCREMENT,
   `idAmigo1` int(6) DEFAULT NULL,
   `idAmigo2` int(6) DEFAULT NULL,
-  PRIMARY KEY (`idAmigos`)
+  PRIMARY KEY (`idAmigos`),
+  KEY `idAmigo1` (`idAmigo1`),
+  KEY `idAmigo2` (`idAmigo2`),
+  CONSTRAINT `amigos_ibfk_1` FOREIGN KEY (`idAmigo1`) REFERENCES `Usuario` (`idUsuario`),
+  CONSTRAINT `amigos_ibfk_2` FOREIGN KEY (`idAmigo2`) REFERENCES `Usuario` (`idUsuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -299,4 +303,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-28 16:41:42
+-- Dump completed on 2017-11-28 19:02:49

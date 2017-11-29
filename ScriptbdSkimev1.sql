@@ -23,8 +23,8 @@ alter table AvatarItem add foreign key (idAvatar) references Avatar(idAvatar);
 alter table Elemento add foreign key (idLista) references Lista(idLista);
 alter table MetaUsuario add foreign key (idMetaColectiva) references MetaColectiva(idMetaColectiva);
 alter table MetaUsuario add foreign key (idUsuario) references Usuario(idUsuario);
-#alter table Amigos add foreign key (idAmigo1) references Usuario(idAmigo1);
-#alter table Amigos add foreign key (idAmigo2) references Usuario(idAmigo2);
+alter table Amigos add foreign key (idAmigo1) references Usuario(idUsuario);
+alter table Amigos add foreign key (idAmigo2) references Usuario(idUsuario);
 
 alter table Lista add idUsuario int(6);
 alter table Lista add foreign key(idUsuario) references Usuario(idUsuario);
