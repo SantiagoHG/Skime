@@ -1,0 +1,15 @@
+/*Estilos bloque de bienvenidos*/
+
+.IndexMain{
+
+	background: url("../images/nonresponsivebg.jpg");
+	background-size: cover;
+	height: 100vh;
+
+}
+
+.container {
+	color: white;
+	background-color: #44af69;
+	
+}
